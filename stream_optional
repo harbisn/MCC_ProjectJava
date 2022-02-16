@@ -1,0 +1,20 @@
+package stream.optional;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+public class Main {
+    public static void main(String[] args) {
+        List<Optional<String>> listOfOptionals = Arrays.asList(
+                Optional.empty(), Optional.of("Hello"), Optional.empty(), Optional.of("World"));
+
+        List<String> filteredList = listOfOptionals.stream()
+                .filter(Optional::isPresent)
+                .map(Optional::get)
+                .collect(Collectors.toList());
+
+        System.out.println(filteredList);
+    }
+}
