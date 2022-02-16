@@ -1,0 +1,30 @@
+package stream.allMatchAndAnyMatch;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class Main {
+    private static boolean check(List<Integer> numbers, int toCheck){
+        boolean test = false;
+        for (int element : numbers) {
+            if (element > toCheck) {
+                test = true;
+                break;
+            }
+        }
+        return test;
+    }
+
+    public static void main(String[] args) {
+        List<Integer> numbers = Arrays.asList(14, 7, 11, 9, 15, 6, 8);
+
+        int toCheck = 7;
+
+        System.out.println(check(numbers, toCheck));
+
+        // mengecek apakah ada element list yang jika dibagi 2 nilainya lebih dari 7
+//        boolean answer = numbers.stream().anyMatch(n -> (n/2 > 7));
+//
+//        System.out.println(answer);
+    }
+}
