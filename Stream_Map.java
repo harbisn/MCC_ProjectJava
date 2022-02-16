@@ -14,7 +14,7 @@ import java.util.stream.Stream;
  *
  * @author Firli
  */
-public class Laptop {
+class Laptop {
     private String merek;
     private int tahunProduksi;
     private float harga;
@@ -44,7 +44,7 @@ public class Laptop {
     
     
 }
-public class LaptopDTO {
+class LaptopDTO {
     private String merek;
     private float harga;
 
